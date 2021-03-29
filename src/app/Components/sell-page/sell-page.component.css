@@ -1,0 +1,27 @@
+.toggleBtn {
+  background-color: black;
+  border-radius: 30px;
+}
+
+.example-container-home {
+  width: 100%;
+  height: 1000px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #555;
+}
+
+.example-container-home {
+  width: 50%;
+  height: 70%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.sellBtn {
+  background-color: white;
+  color: black;
+  margin-bottom: 30px;
+}

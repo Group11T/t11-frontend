@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 't11-frontend';
+  name = "chester"
+  confirm = "confirm"
+
+ 
 }

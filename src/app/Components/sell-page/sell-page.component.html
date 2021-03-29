@@ -1,0 +1,66 @@
+<!-- <p>sell-page works!</p> -->
+<mat-drawer-container class="example-container-home" >
+
+  <mat-card class="homeCard ">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Lets sell some shares</mat-card-title>
+      <!-- <mat-card-subtitle>welcome</mat-card-subtitle> -->
+    </mat-card-header>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Account Balance </mat-label>
+        <input matInput disabled value={{balance}}>
+      </mat-form-field>
+
+      <table class="example-full-width" cellspacing="10"><tr>
+        <td><mat-form-field class="example-full-width">
+
+              <mat-label>PRODUCT</mat-label>
+              <mat-select [(ngModel)]="selectedValue" name="food">
+                <mat-option *ngFor="let food of products" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width">
+          <mat-label>QUANTITY </mat-label>
+          <input matInput  value={{quantity}}>
+        </mat-form-field></td>
+      </tr></table>
+
+        <table class="example-full-width" cellspacing="10"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>PRICE</mat-label>
+            <span style="display: flex">{{Currency}}<input matInput value={{price}} type="number"></span>
+
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>SIDE </mat-label>
+            <input matInput disabled value="SELL">
+          </mat-form-field></td>
+        </tr></table>
+
+        <button class="sellBtn" (click)=somet() mat-button>Sell shares</button>
+
+
+
+    </form>
+
+
+    <mat-card-actions>
+      <a href="/home">
+        <button class="toggleBtn" mat-button>HOME PAGE</button>
+      </a>
+
+      <a href="/buy">
+        <button class="toggleBtn" mat-button>BUY STOCKS </button>
+      </a>
+
+    </mat-card-actions>
+  </mat-card>
+
+</mat-drawer-container>
+
+

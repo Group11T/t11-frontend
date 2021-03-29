@@ -1,0 +1,13 @@
+.backgroundPage{
+ color: white;
+ background-color: white;
+}
+
+.loginBtn{
+  color: black;
+  background: bisque;
+}
+
+form::after{
+  background-color: blanchedalmond;
+}

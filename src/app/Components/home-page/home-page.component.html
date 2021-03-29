@@ -1,0 +1,72 @@
+<mat-drawer-container class="example-container-home" >
+  <!-- sidenav here -->
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <p>Hello, navigate to any other<br> palce you need to go to</p>
+
+    <a class="linktopage" href="/buy">buy</a><br>
+    <a class="linktopage" href="/sell">sell</a><br>
+    <a class="linktopage" href="/monitor">monitor</a><br>
+    <a class="linktopage" href="/">logout</a><br>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+  </mat-drawer>
+  <!-- sidenav here -->
+
+  <!-- whole page here -->
+  <div class="toggleArea">
+    <button class="toggleBtn" type="button" mat-button (click)="drawer.toggle()">
+      Quick Access
+    </button>
+
+    <!-- put somthing here to display user email -->
+    <mat-card class="homeCard ">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{email}}</mat-card-title>
+        <!-- <mat-card-subtitle>welcome</mat-card-subtitle> -->
+      </mat-card-header>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Account Balance </mat-label>
+          <input matInput disabled value={{balance}}>
+        </mat-form-field>
+
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>First Name </mat-label>
+            <input matInput disabled value={{firstName}}>
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width">
+            <mat-label>Last Name </mat-label>
+            <input matInput disabled value={{lastName}}>
+          </mat-form-field></td>
+        </tr></table>
+
+        <p>
+          <mat-form-field class="updatesTab" >
+            <mat-label>Quick Updates</mat-label>
+            <input matInput disabled value={{lastTraded}}>
+          </mat-form-field>
+
+        </p>
+
+
+      </form>
+
+
+      <mat-card-actions>
+
+        <a href="/buy">
+        <button class="toggleBtn" mat-button>BUY STOCK</button>
+          </a>
+
+          <a href="/sell">
+            <button class="toggleBtn" mat-button>SELL SHARE</button>
+          </a>
+
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+<!-- whole page here -->
+</mat-drawer-container>
