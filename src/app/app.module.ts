@@ -35,7 +35,7 @@ import { BuyServiceService } from './Services/buy-service.service';
     AppRoutingModule,
     MatSliderModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
+     FlexLayoutModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
